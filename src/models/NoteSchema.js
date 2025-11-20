@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+export const valid_priorities = ["💀", "👍", "⭐"];
+
 const noteSchema = new mongoose.Schema( //define schema for Note model
     {
         title: {
@@ -12,12 +14,11 @@ const noteSchema = new mongoose.Schema( //define schema for Note model
         },
         priority: {
             type: String,
-            enum: ["💀", "👍", "⭐"],
+            enum: valid_priorities,
             default: "💀"
         }
     }, {timestamps: true}
 ); 
 
-const Note = mongoose.model("Note", noteSchema); //create model using noteSchema as the blueprint with the name "Note"
-//monggoose.model add methods like . find(), .findById(), .save() to interact with the notes collection in the database
+const Note = mongoose.model("Note", noteSchema); //create model using noteSchema as the blueprint with the name "Note" //monggoose.model add methods like . find(), .findById(), .save() to interact with the notes collection in the database
 export default Note
