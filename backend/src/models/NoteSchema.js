@@ -20,5 +20,5 @@ const noteSchema = new mongoose.Schema( //define schema for Note model
     }, {timestamps: true}
 ); 
 
-const Note = mongoose.model("Note", noteSchema); //create model using noteSchema as the blueprint with the name "Note" //monggoose.model add methods like . find(), .findById(), .save() to interact with the notes collection in the database
+const Note = mongoose.model("Note", noteSchema); //create model using noteSchema as the blueprint with the name "Note" //monggoose.model add methods like .find(), .findById(), .save() to interact with the notes collection in the database
 export default Note

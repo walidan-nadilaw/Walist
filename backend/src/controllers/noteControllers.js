@@ -20,6 +20,7 @@ export async function getAllNotes(req,res) {
 export async function getOneNote(req,res) { //req.params.id gets the id from the request URL
     try{
         const note = await Note.findById(req.params.id);
+        if(!note) return res.status(404).json({message: "note not found"});
         res.status(200).json(note);
     }
     catch (error) {
@@ -67,7 +68,7 @@ export async function updateNote(req,res) {
         if(!updatedNote) return res.status(404).json({messsage: "note not found"});
         res.status(200).json(
             {
-                message: "noted updated successfully",
+                message: "note updated successfully",
                 note: updatedNote
             }
         );

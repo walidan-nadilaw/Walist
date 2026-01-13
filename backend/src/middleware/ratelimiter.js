@@ -19,3 +19,13 @@ const ratelimiter = async(req,res,next)=>{
 }
 
 export default ratelimiter;
+
+/*
+return value dari ratelimit.limit("batman")
+{
+   success: true,      // <--- Kita cuma butuh ini
+   limit: 10,
+   remaining: 9,
+   reset: 1700000000
+}
+*/
