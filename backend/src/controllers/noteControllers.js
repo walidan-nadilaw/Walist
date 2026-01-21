@@ -2,14 +2,8 @@ import Note, {valid_priorities} from "../models/NoteSchema.js"
 
 export async function getAllNotes(req,res) {
     try {
-        const totalNotes = await Note.countDocuments();
-        const AllNotes = await Note.find();
-        res.status(200).json(
-            {
-                total: totalNotes,
-                Notes: AllNotes
-            }
-        );
+        const AllNotes = await Note.find().sort({ updatedAt: -1});
+        res.status(200).json(AllNotes);
     }
     catch (error) {
         console.error("Error in getAllnotes controller", error);
