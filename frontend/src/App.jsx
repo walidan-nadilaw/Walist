@@ -3,7 +3,6 @@ import CreateNote from "./pages/CreateNote.jsx";
 import NoteDetail from "./pages/NoteDetail.jsx";
 import Home from "./pages/Home.jsx"
 import Test from "./pages/test.jsx";
-import toast from "react-hot-toast";
 
 const App = () => {
   return (
