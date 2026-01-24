@@ -19,7 +19,8 @@
     "dotenv": "^17.2.1",
     "express": "^4.18.2",
     "mongoose": "^8.17.1",
-    "notetaker-mern": "file:.."
+    "notetaker-mern": "file:..",
+    "walist": "file:.."
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
