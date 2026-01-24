@@ -56,9 +56,8 @@ const Home = () => { //bikin komponen Home untuk halaman utama
           {/* apa itu notes.map? buat apa key? apa maksudnya note={note}? bagaimana cara kerja dan setNotes dan useState?*/}
         </div>
       )}
+
     </div>
-
-
   </div>
 };
 
