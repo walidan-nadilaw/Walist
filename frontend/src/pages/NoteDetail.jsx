@@ -80,54 +80,52 @@ const NoteDetail = () => { //bikin komponen NoteDetail untuk halaman detail cata
   return (
     <div className='min-h-screen'>
       <div className='container mx-auto px-4 py-8 max-w-2xl'>
-        <div >
-          <div className='flex items-center justify-between mb-6'>
-            <Link to="/" className='btn btn-ghost'>
-              <ArrowLeft className='size-4'/>
-              Back to notes
-            </Link>
+        <div className='flex items-center justify-between mb-6'>
+          <Link to="/" className='btn btn-ghost'>
+            <ArrowLeft className='size-4'/>
+            Back to notes
+          </Link>
 
-            <button onClick={handleDelete} className='btn btn-error btn-outline'>
-              <Trash2Icon className='size-4'/>
-              Delete Note
-            </button>
-          </div>
+          <button onClick={handleDelete} className='btn btn-error btn-outline'>
+            <Trash2Icon className='size-4'/>
+            Delete Note
+          </button>
+        </div>
 
-          <div className='card bg-base-100'>
-            <div className='card-body'>
+        <div className='card bg-base-100'>
+          <div className='card-body'>
 
-              <div className='form-control mb-2'>
-                <label className='label'>
-                  <span className='label-text'>Title</span>
-                </label>
-                <input
-                  placeholder='note title'
-                  className='input input-bordered'
-                  value={note?.title || "loading..."}
-                  onChange={(e) => {setNote({...note, title: e.target.value })}} 
-                /> 
-                {/* apa maksudnya ...note? apa fungsi e di sini? */}
-              </div>
-
-              <div className='form-control mb-2'>
-                <label className='label'>
-                  <span className='label-text'>Content</span>
-                </label>
-                <textarea 
-                  placeholder='insert your content here'
-                  value={note?.content || "loading..."}
-                  className='textarea textarea-bordered h-32'
-                  onChange={(e)=>setNote({...note, content: e.target.value})}
-                />
-              </div>
-
-              <div className='card-actions justify-end'>
-                <button className='btn btn-primary' disabled={save} onClick={handleSave}>
-                  {save? "Saving..." : "save changes" }
-                </button>
-              </div>
-              
+            <div className='form-control mb-2'>
+              <label className='label'>
+                <span className='label-text'>Title</span>
+              </label>
+              <input
+                placeholder='note title'
+                className='input input-bordered'
+                value={note?.title || "loading..."}
+                onChange={(e) => {setNote({...note, title: e.target.value })}} 
+              /> 
+              {/* apa maksudnya ...note? apa fungsi e di sini? */}
             </div>
+
+            <div className='form-control mb-2'>
+              <label className='label'>
+                <span className='label-text'>Content</span>
+              </label>
+              <textarea 
+                placeholder='insert your content here'
+                value={note?.content || "loading..."}
+                className='textarea textarea-bordered h-32'
+                onChange={(e)=>setNote({...note, content: e.target.value})}
+              />
+            </div>
+
+            <div className='card-actions justify-end'>
+              <button className='btn btn-primary' disabled={save} onClick={handleSave}>
+                {save? "Saving..." : "save changes" }
+              </button>
+            </div>
+            
           </div>
         </div>
       </div>

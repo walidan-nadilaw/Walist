@@ -1,11 +1,9 @@
 import { Link } from 'react-router'
 import { PlusIcon } from 'lucide-react'
-import "@fontsource/playfair-display/700.css"; 
-import "@fontsource/playfair-display/400-italic.css";
 
 const Navbar = () => {
   return (
-    <header className='bg-base-200 border-b border-base-content/10'>
+    <header className='bg-base-200 border-b border-base-content/10 relative z-0'>
       <div className='mx-auto max-w-6xl px-4 py-4'>
         <div className='flex items-center justify-between'>
           <h1 className='text-4xl font-bold italic tracking-tight font-serif text-primary'>
