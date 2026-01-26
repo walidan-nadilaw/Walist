@@ -90,8 +90,8 @@ If you prefer running it manually on your machine:
 ```bash
 cd backend
 npm install
-# Ensure .env file is created as shown above
 npm start
+# Ensure .env file is created as shown above
 ```
 
 **2. Frontend Setup**
