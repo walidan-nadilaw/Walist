@@ -88,3 +88,14 @@ cd backend
 npm install
 # Ensure .env file is created as shown above
 npm start
+```
+
+**2. Frontend Setup**
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+
+
