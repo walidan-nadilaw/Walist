@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend-api:
+    build: ./backend
+    container_name: walist-backend
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./backend/.env
+    environment:
+      - NODE_ENV=development  # <--- FIX 1: Paksa mode development agar tidak cari file frontend
+    volumes:
+      - ./backend:/app
+      - /app/node_modules     # <--- FIX 2: Mencegah node_modules Windows menimpa container
+
+  frontend-api:
+    build: ./frontend
+    container_name: walist-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:5001
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules     # <--- FIX 3: INI KUNCINYA (Anonymous Volume)
+    depends_on:
+      - backend-api
