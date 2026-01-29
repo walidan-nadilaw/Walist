@@ -55,7 +55,7 @@ The easiest way to run this application is using Docker. You don't need to insta
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/walidan-nadilaw/MERNote.git](https://github.com/walidan-nadilaw/MERNote.git)
+    git clone https://github.com/walidan-nadilaw/Walist.git
     cd MERNote
     ```
 
